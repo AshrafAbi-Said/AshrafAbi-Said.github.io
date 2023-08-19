@@ -1,0 +1,14 @@
+[2023-08-10 06:36:16] [class-ss-archive-creation-job.php:104] Not starting; we're already in the middle of a job
+[2023-08-10 06:37:14] [class-ss-admin-settings.php:423] Received request to cancel static archive generation
+[2023-08-10 06:37:14] [class-ss-archive-creation-job.php:213] Cancelling job; job is not done
+[2023-08-10 06:37:14] [class-ss-archive-creation-job.php:224] The queue isn't empty; overwriting current task with a cancel task
+[2023-08-10 06:37:20] [class-ss-url-fetcher.php:228] Fetching URL: https://portfolio.local
+[2023-08-10 06:37:25] [class-ss-admin-settings.php:423] Received request to cancel static archive generation
+[2023-08-10 06:37:25] [class-ss-archive-creation-job.php:213] Cancelling job; job is not done
+[2023-08-10 06:37:25] [class-ss-archive-creation-job.php:224] The queue isn't empty; overwriting current task with a cancel task
+[2023-08-10 06:42:56] [class-ss-url-fetcher.php:228] Fetching URL: https://portfolio.local
+[2023-08-10 06:53:27] [class-ss-url-fetcher.php:228] Fetching URL: https://portfolio.local
+[2023-08-10 06:55:28] [class-ss-admin-settings.php:423] Received request to cancel static archive generation
+[2023-08-10 06:55:28] [class-ss-archive-creation-job.php:213] Cancelling job; job is not done
+[2023-08-10 06:55:28] [class-ss-archive-creation-job.php:224] The queue isn't empty; overwriting current task with a cancel task
+[2023-08-10 07:38:08] [class-ss-url-fetcher.php:228] Fetching URL: https://portfolio.local
