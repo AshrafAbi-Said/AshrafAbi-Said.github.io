@@ -113,21 +113,40 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 document.querySelectorAll('.game-card[data-video]').forEach(card => {
     const video = card.querySelector('.hover-video');
     const img = card.querySelector('img');
+    const loader = card.querySelector('.loader');
     const videoSrc = card.dataset.video;
+
+    let isLoaded = false;
 
     card.addEventListener('mouseenter', () => {
         if (!video.src) {
-            video.src = videoSrc; // lazy-load
+            loader.classList.add('visible'); // show spinner
+
+            video.src = videoSrc;
             video.load();
+
+            video.addEventListener('canplay', () => {
+                isLoaded = true;
+
+                loader.classList.remove('visible'); // hide spinner
+                img.style.visibility = 'hidden';
+                video.classList.add('visible');
+                video.play();
+            }, { once: true });
+
+        } else {
+            if (isLoaded) {
+                img.style.visibility = 'hidden';
+                video.classList.add('visible');
+                video.play();
+            }
         }
-        img.style.visibility = 'hidden';
-        video.style.display = 'block';
-        video.play();
     });
 
     card.addEventListener('mouseleave', () => {
+        loader.classList.remove('visible'); // hide if leaving early
         video.pause();
-        video.style.display = 'none';
+        video.classList.remove('visible');
         img.style.visibility = 'visible';
     });
 });
